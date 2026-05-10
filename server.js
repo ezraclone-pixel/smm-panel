@@ -13,6 +13,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // HOME ROUTE FIX
+app.get("/test", (req,res)=>{
+    res.send("server ok");
+});
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
